@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      My Stuffs
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page2">
+  <form id="myStuffs-form1">
+    <ion-searchbar placeholder="search by name" name="" id="myStuffs-search1"></ion-searchbar>
+  </form>
+  <div id="myStuffs-container2">
+    <button id="myStuffs-button3" (click)="doTakeStuff()" ion-button color="positive" block icon-left>
+      <ion-icon name="attach"></ion-icon>
+      Take
+    </button>
+    <button id="myStuffs-button2" (click)="doReleaseStuff()" ion-button color="positive" block icon-right>
+      Release
+      <ion-icon name="close"></ion-icon>
+    </button>
+  </div>
+  <ion-list id="myStuffs-list2">
+    <ion-item-sliding #item *ngFor="let stuffItem of listStuffUser; let i = index ">
+        <ion-item color="none" >
+          <ion-icon name="ionic" item-left></ion-icon>
+          {{stuffItem}}
+        </ion-item>
+        
+        <ion-item-options side="right">
+          <button ion-button (click)="doTransfer(item)">
+              <ion-icon name="send"></ion-icon>
+              Transfer
+          </button>
+        </ion-item-options>
+        
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

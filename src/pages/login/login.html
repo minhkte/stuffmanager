@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Login
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page4">
+  <form id="login-form2">
+    <ion-list id="login-list4">
+      <ion-item id="login-input1">
+        <ion-label>
+          Email
+        </ion-label>
+        <ion-input type="email" [value]="email" [(ngModel)]="email" name="email" placeholder="" ></ion-input>
+      </ion-item>
+      <ion-item id="login-input2">
+        <ion-label>
+          Password
+        </ion-label>
+        <ion-input type="password" [value]="password" [(ngModel)]="password" placeholder="" name="password"></ion-input>
+      </ion-item>
+    </ion-list>
+    <div class="spacer" style="height:40px;" id="login-spacer1"></div>
+    <button id="login-button4" (click)='doSignIn("email");' ion-button color="stable" block>
+      Log in
+    </button>
+    <button id="login-button5" (click)="navSignUp()" ion-button clear color="positive" >
+      Or create an account
+    </button>
+  </form>
+</ion-content>
